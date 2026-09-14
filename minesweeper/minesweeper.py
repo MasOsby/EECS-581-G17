@@ -4,7 +4,7 @@ Function: class to hold the logic for minesweeper game
 Inputs: None
 Outputs: None
 External sources: None
-Authors: Drew Franke
+Authors: Drew Franke, Mo Osby
 date: 09/13/2026
 """
 import random
@@ -35,3 +35,8 @@ class Minesweeper:
     def reveal_cell(self, col, row):
         if (col, row) not in self.revealed:
             self.revealed.add((col, row))
+        # Check for if user clicks on a mine 
+        if (col, row) in self.mines:
+            self.revealed.add((col, row))  # Reveal the mine cell    
+            return False  # Game over
+        return True  # Continue game
