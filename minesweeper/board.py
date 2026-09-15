@@ -33,9 +33,14 @@ class Board:
         if self.game.first_click:
             self.game.place_mines(col, row)
 
-        #don't reveal an already revealed cell
-        if (col, row) not in self.game.revealed:
-            self.game.reveal_cell(col, row)
+        #Don't need to check for if cell already revealed because reveal_cell now handles it (recursive base case)
+        safe=self.game.reveal_cell(col, row)
+
+        if not safe:
+            print("Game Over! You clicked on a mine.")
+            #"TODO: Implement all mines revealed and game over screen"
+
+    
         
         
 
