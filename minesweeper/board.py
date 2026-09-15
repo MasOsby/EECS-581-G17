@@ -4,7 +4,7 @@ Function: board class for minesweeper game that displays the board
 Inputs: None
 Outputs: None
 External sources: pygame documentation for reference 
-Authors: Mo Osby, Drew Franke
+Authors: Mo Osby, Drew Franke, Alex Lanter
 Date: 09/12/2026
 """
 import pygame

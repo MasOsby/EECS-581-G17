@@ -55,5 +55,19 @@ class Minesweeper:
 
 
     def reveal_cell(self, col, row):
+        if (col, row) in self.revealed: 
+            return
+        if (col, row) in self.mines: #Base cases for recursion
+            return
         if (col, row) not in self.revealed:
             self.revealed.add((col, row))
+        if self.adjacent_mines.get((col, row), 0) == 0: #Get number of adjacent mines for space, keep going if it's 0
+            for i in [-1, 0, 1]: 
+                for j in [-1, 0, 1]:
+                    if i == 0 and j == 0: #Check 3x3 grid around cell, skip cell itself
+                        continue
+                    x, y = col + i, row + j #Get current cell inside 3x3 area being checked
+                    if 0 <= x < self.cols and 0 <= y < self.rows: #If space is inbounds
+                        self.reveal_cell(x, y) #Reveal it (which won't work if it's a mine or already revealed)
+        
+        
