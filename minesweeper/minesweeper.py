@@ -56,7 +56,7 @@ class Minesweeper:
 
     def reveal_cell(self, col, row):
         if (col, row) in self.revealed: 
-            return
+            return True
         if (col, row) in self.mines:
             self.revealed.add((col, row))  # Reveal the mine cell    
             return False  # Game over
@@ -70,5 +70,6 @@ class Minesweeper:
                     x, y = col + i, row + j #Get current cell inside 3x3 area being checked
                     if 0 <= x < self.cols and 0 <= y < self.rows: #If space is inbounds
                         self.reveal_cell(x, y) #Reveal it (which won't work if it's a mine or already revealed)
+        return True
         
         
