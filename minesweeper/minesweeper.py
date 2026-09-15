@@ -54,9 +54,6 @@ class Minesweeper:
 
 
 
-
-
-
     def reveal_cell(self, col, row):
         if (col, row) not in self.revealed:
             self.revealed.add((col, row))
