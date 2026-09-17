@@ -9,6 +9,7 @@ Date: 09/12/2026
 """
 import pygame
 from minesweeper import Minesweeper
+
 class Board:
     def __init__(self, rows, cols, num_mines=10):
         self.rows = rows
@@ -17,6 +18,7 @@ class Board:
 
         self.x = 25
         self.y = 25
+
         self.game = Minesweeper(num_mines, rows, cols)  # Initialize the Minesweeper game with 10 mines
         self.font = pygame.font.Font(None, 32)  # font for drawing adjacent-mine numbers
 
@@ -40,28 +42,54 @@ class Board:
             print("Game Over! You clicked on a mine.")
             #"TODO: Implement all mines revealed and game over screen"
 
-    
-        
-        
+    #Import Assets
+    def loadAssets(self):
+
+        #Store all assets
+        self.tiles = {}
+        self.events = {}
+
+        # List of event sprite names
+        events = {"unknown" : "TileUnknown", 
+                  "empty": "TileEmpty", 
+                  "flag": "TileFlag", 
+                  "mine": "TileMine", 
+                  "explosion": "TileExploded"}
+        #List of numbered tiles
+
+        tile_range = range(1,9)
+
+        # Load and resize numbered tiles
+        for i in tile_range:
+            self.tiles[i] = pygame.image.load(f"assets/Tile{i}.png").convert_alpha()
+            self.tiles[i] = pygame.transform.scale(self.tiles[i], (self.tile_size, self.tile_size))
+
+        # Load and resize event sprites
+        for event, i in events.items():
+            self.events[event] = pygame.image.load(f"assets/{i}.png").convert_alpha()
+            self.events[event] = pygame.transform.scale(self.events[event], (self.tile_size, self.tile_size))
+
+
 
     def draw(self, screen):
+        #Load in asset files
+        self.loadAssets()
+
+        #Draw board onto the screen
         for row in range(self.rows):
             for col in range(self.cols):
                 x = self.x + col * self.tile_size
                 y = self.y + row * self.tile_size
 
+                #Change tiles based on the event after click
                 if (col, row) in self.game.revealed:
-                    color = "white"
+                    event = self.events["empty"]
                 elif (col, row) in self.game.mines:
-                    color = "red"
+                    event = self.events["mine"]
                 else:
-                    color = "gray"
+                    event = self.events["unknown"]
 
-                pygame.draw.rect(
-                    screen,
-                    color,
-                    (x, y, self.tile_size, self.tile_size)
-                )
+                screen.blit(event, (x,y))
 
                 pygame.draw.rect(
                     screen,
