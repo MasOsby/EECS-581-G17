@@ -54,9 +54,6 @@ class Minesweeper:
 
                 self.adjacent_mines[(col, row)] = count #add found count to dictionary
 
-
-
-
     def reveal_cell(self, col, row):
         if (col, row) in self.revealed: 
             return True
@@ -75,6 +72,11 @@ class Minesweeper:
                     x, y = col + i, row + j #Get current cell inside 3x3 area being checked
                     if 0 <= x < self.cols and 0 <= y < self.rows: #If space is inbounds
                         self.reveal_cell(x, y) #Reveal it (which won't work if it's a mine or already revealed)
+        #Win logic if the # of cells remaining is equal to num on mines
+        safe_cells = (self.rows * self.cols) - self.num_mines
+        if len(self.revealed) == safe_cells:
+            self.game_over = True
+            self.won = True
         return True
         
         

@@ -40,7 +40,7 @@ class Board:
             return
         self.game.reveal_cell(col, row)
 
-        if self.game.game_over:
+        if self.game.game_over and not self.game.won:
             print("Game Over! You clicked on a mine.")
             
 
