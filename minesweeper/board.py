@@ -20,7 +20,7 @@ class Board:
         self.y = 25
 
         self.game = Minesweeper(num_mines, rows, cols)  # Initialize the Minesweeper game with 10 mines
-        self.font = pygame.font.Font(None, 32)  # font for drawing adjacent-mine numbers
+        self.font = pygame.font.Font("assets/ThaleahFat.ttf", 32)  # font for drawing adjacent-mine numbers
 
     def handle_click(self, mouse_x, mouse_y):
         
@@ -42,8 +42,28 @@ class Board:
 
         if self.game.game_over and not self.game.won:
             print("Game Over! You clicked on a mine.")
-            
 
+    #Player will use spacebar while hovering over the desired tile to place a flag
+    def place_flag(self, mouse_x, mouse_y):
+        #Maybe make this into a struct?
+        col = (mouse_x - self.x) // self.tile_size
+        row = (mouse_y - self.y) // self.tile_size
+        if col < 0 or col >= self.cols or row < 0 or row >= self.rows:
+            return
+
+        #Cannot place flag on revealed tile
+        if self.game.game_over or (col, row) in self.game.revealed:
+            return
+
+        #Remove flag
+        if (col, row) in self.game.flags:
+            self.game.flags.remove((col, row))
+
+        #Player cannot place more flags than there are mines on the board
+        if len(self.game.flags) < self.game.num_mines:
+            self.game.flags.add((col, row))
+
+    
     #Import Assets
     def loadAssets(self):
 
@@ -71,8 +91,6 @@ class Board:
             self.events[event] = pygame.image.load(f"assets/{i}.png").convert_alpha()
             self.events[event] = pygame.transform.scale(self.events[event], (self.tile_size, self.tile_size))
 
-
-
     def draw(self, screen):
         #Load in asset files
         self.loadAssets()
@@ -86,6 +104,8 @@ class Board:
                 #Change tiles based on the event after click
                 if self.game.game_over and (col, row) == self.game.exploded_mine:
                     event = self.events["explosion"]
+                elif (col, row) in self.game.flags:
+                    event = self.events["flag"]
                 elif (col, row) in self.game.revealed:
                     event = self.events["empty"]
                 elif self.game.game_over and (col, row) in self.game.mines:
@@ -108,3 +128,13 @@ class Board:
                         text = self.font.render(str(count), True, "black") #Draw the number of mines to middle of tile
                         text_rect = text.get_rect(center=(x + self.tile_size // 2, y + self.tile_size // 2))
                         screen.blit(text, text_rect)
+
+                #Draw Remaining Flags
+                flags = self.game.num_mines - len(self.game.flags)
+                flag_text = self.font.render(f"Flags: {flags}", True, "black")
+                screen.blit(flag_text, (25, 550))
+
+                #Draw Remaining Mines Count
+                mines = self.game.num_mines - flags
+                mine_text = self.font.render(f"Mines: {mines}", True, "black")
+                screen.blit(mine_text, (25, 600))

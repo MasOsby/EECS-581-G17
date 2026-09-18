@@ -14,6 +14,7 @@ class Minesweeper:
         self.num_mines = num_mines
         self.mines = set()
         self.revealed = set()
+        self.flags = set()
         self.first_click = True
         self.rows = rows
         self.cols = cols
@@ -55,6 +56,8 @@ class Minesweeper:
                 self.adjacent_mines[(col, row)] = count #add found count to dictionary
 
     def reveal_cell(self, col, row):
+        if (col, row) in self.flags:
+            return True
         if (col, row) in self.revealed: 
             return True
         if (col, row) in self.mines:
