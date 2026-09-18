@@ -58,7 +58,7 @@ class Minesweeper:
         if (col, row) in self.revealed: 
             return True
         if (col, row) in self.mines:
-            self.revealed.add((col, row))  # Reveal the mine cell    
+            # self.revealed.add((col, row))  # Reveal the mine cell    
             return False  # Game over
         if (col, row) not in self.revealed:
             self.revealed.add((col, row))
