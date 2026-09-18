@@ -23,6 +23,7 @@ class Board:
         self.font = pygame.font.Font(None, 32)  # font for drawing adjacent-mine numbers
 
     def handle_click(self, mouse_x, mouse_y):
+        
         #convert mouse click position to board coordinates
         col = (mouse_x - self.x) // self.tile_size
         row = (mouse_y - self.y) // self.tile_size
@@ -35,12 +36,13 @@ class Board:
         if self.game.first_click:
             self.game.place_mines(col, row)
 
-        #Don't need to check for if cell already revealed because reveal_cell now handles it (recursive base case)
-        safe=self.game.reveal_cell(col, row)
+        if self.game.game_over:
+            return
+        self.game.reveal_cell(col, row)
 
-        if not safe:
+        if self.game.game_over and not self.game.won:
             print("Game Over! You clicked on a mine.")
-            #"TODO: Implement all mines revealed and game over screen"
+            
 
     #Import Assets
     def loadAssets(self):
@@ -82,9 +84,11 @@ class Board:
                 y = self.y + row * self.tile_size
 
                 #Change tiles based on the event after click
-                if (col, row) in self.game.revealed:
+                if self.game.game_over and (col, row) == self.game.exploded_mine:
+                    event = self.events["explosion"]
+                elif (col, row) in self.game.revealed:
                     event = self.events["empty"]
-                elif (col, row) in self.game.mines:
+                elif self.game.game_over and (col, row) in self.game.mines:
                     event = self.events["mine"]
                 else:
                     event = self.events["unknown"]

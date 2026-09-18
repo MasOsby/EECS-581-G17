@@ -80,5 +80,15 @@ while running:
 
     screen.fill("white")
     board.draw(screen)
+    # Change the status text for playing/lose/win
+    if board.game.game_over:
+        if board.game.won:
+            status_text = font.render("Victory!", True, "green")
+        else:
+            status_text = font.render("Game Over!", True, "red")
+    else:
+        status_text = font.render("Playing", True, "black")
+    #text placement
+    screen.blit(status_text, (650 // 2 - status_text.get_width() // 2, 550))
     pygame.display.flip()
 pygame.quit()
