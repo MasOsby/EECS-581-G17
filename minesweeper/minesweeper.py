@@ -4,7 +4,7 @@ Function: class to hold the logic for minesweeper game
 Inputs: None
 Outputs: None
 External sources: None
-Authors: Drew Franke, Alex Lanter
+Authors: Drew Franke, Alex Lanter, Mo
 date: 09/13/2026
 """
 import random
