@@ -4,7 +4,7 @@ Function: main function for minesweeper game that displays the board
 Inputs: None
 Outputs: None
 External sources: pygame documentation for reference
-Authors: Mo Osby, Drew Franke
+Authors: Mo Osby, Drew Franke, Vrishank Kulkarni 
 date: 09/12/2026
 """
 import pygame 
@@ -77,6 +77,9 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:
                 board.handle_click(*event.pos)
+
+            elif event.button == 3:        # come back later
+                board.place_flag(*event.pos)
 
     screen.fill("white")
     board.draw(screen)
