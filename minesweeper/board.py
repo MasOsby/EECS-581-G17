@@ -4,7 +4,7 @@ Function: board class for minesweeper game that displays the board
 Inputs: None
 Outputs: None
 External sources: pygame documentation for reference 
-Authors: Mo Osby, Drew Franke, Alex Lanter
+Authors: Mo Osby, Drew Franke, Alex Lanter, Vrishank Kulkarni 
 Date: 09/12/2026
 """
 import pygame
@@ -30,6 +30,10 @@ class Board:
 
         #ignore clicks outside the board
         if col < 0 or col >= self.cols or row < 0 or row >= self.rows:
+            return
+
+        # do not reveal a cell that has a flag
+        if (col, row) in self.game.flags:
             return
 
         #on first click, place mines then reveal
@@ -120,6 +124,20 @@ class Board:
                     "black",
                     (x, y, self.tile_size, self.tile_size), 2
                 )
+
+                
+                # draw a flag if the cell is flagged
+                if (col, row) in self.game.flags:
+                    flag_text = self.font.render("F", True, "red")
+
+                    flag_rect = flag_text.get_rect(
+                        center=(
+                            x + self.tile_size // 2,
+                            y + self.tile_size // 2
+                        )
+                    )
+
+                    screen.blit(flag_text, flag_rect)
 
                 #Draw number adjacent mines (unless=0)
                 if (col, row) in self.game.revealed and (col, row) not in self.game.mines:
