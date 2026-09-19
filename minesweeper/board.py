@@ -32,10 +32,6 @@ class Board:
         if col < 0 or col >= self.cols or row < 0 or row >= self.rows:
             return
 
-        # do not reveal a cell that has a flag
-        if (col, row) in self.game.flags:
-            return
-
         #on first click, place mines then reveal
         if self.game.first_click:
             self.game.place_mines(col, row)
@@ -47,25 +43,28 @@ class Board:
         if self.game.game_over and not self.game.won:
             print("Game Over! You clicked on a mine.")
 
-    #Player will use spacebar while hovering over the desired tile to place a flag
     def place_flag(self, mouse_x, mouse_y):
-        #Maybe make this into a struct?
+        # convert mouse click position to board coordinates
         col = (mouse_x - self.x) // self.tile_size
         row = (mouse_y - self.y) // self.tile_size
+
+        # ignore clicks outside the board
         if col < 0 or col >= self.cols or row < 0 or row >= self.rows:
             return
 
-        #Cannot place flag on revealed tile
-        if self.game.game_over or (col, row) in self.game.revealed:
+        cell = (col, row)
+
+        # do not place flags on revealed cells
+        if cell in self.game.revealed or self.game.game_over:
             return
 
-        #Remove flag
-        if (col, row) in self.game.flags:
-            self.game.flags.remove((col, row))
+        # if the cell already has a flag, remove it
+        if cell in self.game.flags:
+            self.game.flags.remove(cell)
 
-        #Player cannot place more flags than there are mines on the board
-        if len(self.game.flags) < self.game.num_mines:
-            self.game.flags.add((col, row))
+        # otherwise, place a flag if there are flags available
+        elif len(self.game.flags) < self.game.num_mines:
+            self.game.flags.add(cell)
 
     
     #Import Assets
@@ -124,20 +123,6 @@ class Board:
                     "black",
                     (x, y, self.tile_size, self.tile_size), 2
                 )
-
-                
-                # draw a flag if the cell is flagged
-                if (col, row) in self.game.flags:
-                    flag_text = self.font.render("F", True, "red")
-
-                    flag_rect = flag_text.get_rect(
-                        center=(
-                            x + self.tile_size // 2,
-                            y + self.tile_size // 2
-                        )
-                    )
-
-                    screen.blit(flag_text, flag_rect)
 
                 #Draw number adjacent mines (unless=0)
                 if (col, row) in self.game.revealed and (col, row) not in self.game.mines:

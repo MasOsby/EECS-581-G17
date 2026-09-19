@@ -7,8 +7,6 @@ External sources: None
 Authors: Drew Franke, Alex Lanter, Mo
 date: 09/13/2026
 """
-import random
-
 class Minesweeper:
     def __init__(self, num_mines, rows, cols):
         self.num_mines = num_mines
@@ -81,5 +79,3 @@ class Minesweeper:
             self.game_over = True
             self.won = True
         return True
-        
-        
