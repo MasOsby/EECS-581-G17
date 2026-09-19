@@ -78,7 +78,7 @@ while running:
             if event.button == 1:
                 board.handle_click(*event.pos)
 
-            elif event.button == 3:        # come back later
+            elif event.button == 3:
                 board.place_flag(*event.pos)
 
     screen.fill("white")
