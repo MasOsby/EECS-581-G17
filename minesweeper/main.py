@@ -12,8 +12,8 @@ from board import Board
 
 pygame.init()
 screen = pygame.display.set_mode((650, 650))
-font = pygame.font.Font(None, 32)
-small_font = pygame.font.Font(None, 16)
+font = pygame.font.Font("assets/ThaleahFat.ttf", 32)
+small_font = pygame.font.Font("assets/ThaleahFat.ttf", 16)
 
 def draw_input_screen(user_input, error):
     screen.fill("white")
@@ -83,5 +83,17 @@ while running:
 
     screen.fill("white")
     board.draw(screen)
+
+    # Change the status text for playing/lose/win
+    if board.game.game_over:
+        if board.game.won:
+            status_text = font.render("Victory!", True, "green")
+        else:
+            status_text = font.render("Game Over!", True, "red")
+    else:
+        status_text = font.render("Playing", True, "black")
+    #text placement
+    screen.blit(status_text, (650 // 2 - status_text.get_width() // 2, 550))
     pygame.display.flip()
+    
 pygame.quit()

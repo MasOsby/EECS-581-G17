@@ -4,7 +4,7 @@ Function: class to hold the logic for minesweeper game
 Inputs: None
 Outputs: None
 External sources: None
-Authors: Drew Franke, Alex Lantera, 
+Authors: Drew Franke, Alex Lanter, Mo
 date: 09/13/2026
 """
 import random
@@ -19,6 +19,9 @@ class Minesweeper:
         self.rows = rows
         self.cols = cols
         self.adjacent_mines = {} #Dictionary to track adjacent mines per cell
+        self.game_over = False  # Track if the game is over
+        self.won = False  # Track if the player has won
+        self.exploded_mine = None 
 
 
     def place_mines(self, safe_col, safe_row):
@@ -52,16 +55,15 @@ class Minesweeper:
 
                 self.adjacent_mines[(col, row)] = count #add found count to dictionary
 
-
-
-
     def reveal_cell(self, col, row):
         if (col, row) in self.flags:
             return True
         if (col, row) in self.revealed: 
             return True
         if (col, row) in self.mines:
-            self.revealed.add((col, row))  # Reveal the mine cell    
+            # self.revealed.add((col, row))  # Reveal the mine cell 
+            self.exploded_mine = ((col, row))
+            self.game_over = True  # Set game over flag   
             return False  # Game over
         if (col, row) not in self.revealed:
             self.revealed.add((col, row))
@@ -73,6 +75,11 @@ class Minesweeper:
                     x, y = col + i, row + j #Get current cell inside 3x3 area being checked
                     if 0 <= x < self.cols and 0 <= y < self.rows: #If space is inbounds
                         self.reveal_cell(x, y) #Reveal it (which won't work if it's a mine or already revealed)
+        #Win logic if the # of cells remaining is equal to num on mines
+        safe_cells = (self.rows * self.cols) - self.num_mines
+        if len(self.revealed) == safe_cells:
+            self.game_over = True
+            self.won = True
         return True
         
         
