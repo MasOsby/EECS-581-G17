@@ -27,6 +27,7 @@ class Minesweeper:
 
     def place_mines(self, safe_col, safe_row):
         #place mines randomly on the board, ensuring that the first clicked cell and its neighbors (3x3) are safe
+        #function is orginal with some help from assistive inline suggestions (VScode Copilot)
         safe_cell = set()
         for i in [-1, 0, 1]:
             for j in [-1, 0, 1]:
