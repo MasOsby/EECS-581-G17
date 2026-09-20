@@ -86,9 +86,10 @@ class Board:
         tile_range = range(1,9)
 
         # Load and resize numbered tiles
+        #Copilot assisted syntax
         for i in tile_range:
             self.tiles[i] = pygame.image.load(f"assets/Tile{i}.png").convert_alpha()
-            self.tiles[i] = pygame.transform.scale(self.tiles[i], (self.tile_size, self.tile_size))
+            self.tiles[i] = pygame.transform.scale(self.tiles[i], (self.tile_size, self.tile_size))  
 
         # Load and resize event sprites
         for event, i in events.items():
@@ -160,8 +161,9 @@ class Board:
                         screen.blit(text, text_rect)
 
                 #Draw Remaining Flags
+                #Copilot assisted syntax
                 flags = self.game.num_mines - len(self.game.flags)
-                flag_text = self.font.render(f"Flags: {flags}", True, "black")
+                flag_text = self.font.render(f"Flags: {flags}", True, "black") 
                 screen.blit(flag_text, (25, 550))
 
                 #Draw Remaining Mines Count
