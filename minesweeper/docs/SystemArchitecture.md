@@ -169,3 +169,18 @@ flowchart TD
     flags -->|Read by| draw[Board.draw]
     draw -->|Renders| screen[Screen]
 ```
+## Asset Attributes
+
+-Numbered Tiles and Sprites
+https://uchimama.itch.io/minesweeper-tileset
+*Credit: UchiMama via itch.io*
+
+-Pixelated Font
+https://tinyworlds.itch.io/free-pixel-font-thaleah
+*Credit: Rick Hoppman via itch.io, licensed for commercial use.*
+
+*Disclaimer: All visual assets used in this project marked as free on itch.io. Authors of
+the assets are credited above.*
+
+
+
