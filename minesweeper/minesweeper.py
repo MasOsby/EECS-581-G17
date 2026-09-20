@@ -1,11 +1,12 @@
 """
 Name: minesweeper.py
-Function: class to hold the logic for minesweeper game
+Function: Class to hold the logic for minesweeper game. Includes Mine placement, adjacency detection, space revealing, detect game over, etc.
 Inputs: None
 Outputs: None
 External sources: None
-Authors: Drew Franke, Alex Lanter, Mo
-date: 09/13/2026
+Authors: Drew Franke, Alex Lanter, Mo Osby
+Date Created: 09/13/2026
+Date Last Edited: 09/20/2026
 """
 import random
 
