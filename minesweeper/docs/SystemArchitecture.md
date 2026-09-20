@@ -183,7 +183,6 @@ https://tinyworlds.itch.io/free-pixel-font-thaleah
 the assets are credited above.*
 
 ## Person Hours
-# Person Hours
 
 #### Drew Franke
 | Task                                  | Estimated | Actual |
