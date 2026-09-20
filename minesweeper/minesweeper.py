@@ -3,7 +3,7 @@ Name: minesweeper.py
 Function: Class to hold the logic for minesweeper game. Includes Mine placement, adjacency detection, space revealing, detect game over, etc.
 Inputs: None
 Outputs: None
-External sources: None
+External sources: VScode Copilot
 Authors: Drew Franke, Alex Lanter, Mo Osby
 Date Created: 09/13/2026
 Date Last Edited: 09/20/2026
