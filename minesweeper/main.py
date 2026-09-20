@@ -1,10 +1,10 @@
 """
 Name: main.py
 Function: main function for minesweeper game that starts the game, displays some board details and detects player interaction.
-Inputs: None
-Outputs: None
+Inputs: Number of mines, left and right mouse events
+Outputs: Drawings rendered to pygame window, Win event, Loss event
 External sources: pygame documentation for reference
-Authors: Mo Osby, Drew Franke, Vrishank Kulkarni 
+Authors: Mo Osby, Drew Franke, Vrishank Kulkarni, Alex Lanter
 Date Created: 09/12/2026
 Date Last Edited: 09/20/2026
 """
