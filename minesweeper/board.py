@@ -3,7 +3,7 @@ Name: Board.py
 Function: board class for minesweeper game that displays the board and handles clicking/flags.
 Inputs: None
 Outputs: None
-External sources: pygame documentation for reference 
+External sources: pygame documentation for reference, VScode Copilot
 Authors: Mo Osby, Drew Franke, Alex Lanter, Vrishank Kulkarni, Davina Love
 Date Created: 09/12/2026
 Date last Edited: 09/20/2026
@@ -24,7 +24,8 @@ class Board:
         self.font = pygame.font.Font("assets/ThaleahFat.ttf", 32)  # font for drawing adjacent-mine numbers
 
     def handle_click(self, mouse_x, mouse_y):
-        
+        #handle left clicks to reveal cell
+        #function is orginal with some help from assistive inline suggestions (VScode Copilot)
         #convert mouse click position to board coordinates
         col = (mouse_x - self.x) // self.tile_size
         row = (mouse_y - self.y) // self.tile_size
