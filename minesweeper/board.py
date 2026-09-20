@@ -100,7 +100,8 @@ class Board:
     def draw(self, screen):
         #Load in asset files
         self.loadAssets()
-        
+
+        #Copilot assisted for drawing details
         # Draw column labels A-J
         for col in range(self.cols):
             label = chr(ord('A') + col) #Label to give is A's unicode plus column number
@@ -154,6 +155,7 @@ class Board:
                 )
 
                 #Draw number adjacent mines (unless=0)
+                #Copilot assisted for drawing details
                 if (col, row) in self.game.revealed and (col, row) not in self.game.mines:
                     count = self.game.adjacent_mines.get((col, row), 0) #Get mine number
                     if count > 0:
