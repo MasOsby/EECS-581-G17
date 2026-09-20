@@ -171,11 +171,11 @@ flowchart TD
 ```
 ## Asset Attributes
 
--Numbered Tiles and Sprites
+- Numbered Tiles and Sprites
 https://uchimama.itch.io/minesweeper-tileset
 *Credit: UchiMama via itch.io*
 
--Pixelated Font
+- Pixelated Font
 https://tinyworlds.itch.io/free-pixel-font-thaleah
 *Credit: Rick Hoppman via itch.io, licensed for commercial use.*
 
