@@ -80,15 +80,17 @@ board = Board(10, 10, num_mines=num_mines)
 running = True
 while running:
     #main game loop
+    # loop through events and keep game running unless user exits out of window 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
         if event.type == pygame.MOUSEBUTTONDOWN:
+            # handle left click actions 
             if event.button == 1:
                 #left click to reveal cell
                 board.handle_click(*event.pos)
-
+            # handle right click actions 
             elif event.button == 3:
                 #right click to place flag
                 board.place_flag(*event.pos)

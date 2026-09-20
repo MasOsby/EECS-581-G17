@@ -65,6 +65,7 @@ class Board:
             self.game.flags.remove(cell)
 
         # otherwise, place a flag if there are flags available
+        # copilot assisted line finishing
         elif len(self.game.flags) < self.game.num_mines:
             self.game.flags.add(cell)
 
