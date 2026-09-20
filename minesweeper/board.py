@@ -1,11 +1,12 @@
 """
 Name: Board.py
-Function: board class for minesweeper game that displays the board
+Function: board class for minesweeper game that displays the board and handles clicking/flags.
 Inputs: None
 Outputs: None
 External sources: pygame documentation for reference 
-Authors: Mo Osby, Drew Franke, Alex Lanter, Vrishank Kulkarni 
-Date: 09/12/2026
+Authors: Mo Osby, Drew Franke, Alex Lanter, Vrishank Kulkarni, Davina Love
+Date Created: 09/12/2026
+Date last Edited: 09/20/2026
 """
 import pygame
 from minesweeper import Minesweeper
