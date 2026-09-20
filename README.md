@@ -32,7 +32,7 @@ A 10x10 version of the classic puzzle game Minesweeper.
 
 When you start up the game, you first have to enter the number of mines you want (10-20).
 
-Then, use left click to uncover spaces and right click to toggle flags.
+Then, use left click to uncover spaces and right click to toggle flags. Right click again to remove flags that have been placed. 
 
 ## System Architecture Documentation
 [Link to page](minesweeper/docs/SystemArchitecture.md)
