@@ -40,7 +40,7 @@ class Minesweeper:
         self.first_click = False
         self.calculate_adjacent()
 
-    def calculate_adjacent(self):
+    def calculate_adjacent(self): #Copilot assisted for counting adjacent logic.
         for col in range(self.cols):
             for row in range(self.rows):
                 if (col, row) in self.mines: #Look at every cell, if it's a mine skip
@@ -57,7 +57,7 @@ class Minesweeper:
 
                 self.adjacent_mines[(col, row)] = count #add found count to dictionary
 
-    def reveal_cell(self, col, row):
+    def reveal_cell(self, col, row): #Copilot assisted for recursion
         if (col, row) in self.flags:
             return True
         if (col, row) in self.revealed: 
