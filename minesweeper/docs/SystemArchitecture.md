@@ -182,5 +182,48 @@ https://tinyworlds.itch.io/free-pixel-font-thaleah
 *Disclaimer: All visual assets used in this project marked as free on itch.io. Authors of
 the assets are credited above.*
 
+## Person Hours
+# Person Hours
 
+#### Drew Franke
+| Task                                  | Estimated | Actual |
+| ------------------------------------- | --------- | ------ |
+| Coding and Pygame Documentation       |           | 1.5    |
+| Coding Task 2 and Left-Click Handling |           | 1.5    |
+| **Total**                             |           | **3**  |
+#### Vrishank Kulkarni
+| Task            | Estimated | Actual |
+| --------------- | --------- | ------ |
+| Flagging System |           | 1      |
+| **Total**       |           | **1**  |
+#### Alex Lanter
+| Task                                | Estimated | Actual   |
+| ----------------------------------- | --------- | -------- |
+| Adjacent Mines and Recursive Reveal |           | 1.5      |
+| Win/Lose Logic                      |           | .75      |
+| **Total**                           |           | **2.25** |
+#### Mo Osby
+| Task           | Estimated | Actual  |
+| -------------- | --------- | ------- |
+| Win/Lose Logic |           | .5      |
+| Win/Lose       |           | 1       |
+| **Total**      |           | **1.5** |
+#### Davina Love
+| Task                   | Estimated | Actual  |
+| ---------------------- | --------- | ------- |
+| Coding UI              | 2         | 2.0     |
+| Asset Files            | .5        | 1.0     |
+| Flagging System & misc | 1.0       | 1.5     |
+| **Total**              | **3.5**   | **4.5** |
+#### Kayaan Patel
+| Task           | Estimated | Actual  |
+| -------------- | --------- | ------- |
+| Win/Lose Logic |           | .5      |
+| Win/Lose       |           | 1       |
+| **Total**      |           | **1.5** |
 
+#### Group Meetings : 2.5 hours
+
+## Grand Total Person Hours 
+### Estimated = 
+### Actual = 
