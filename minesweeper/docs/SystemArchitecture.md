@@ -1,7 +1,7 @@
 # System Architecture
 This document describes the system architecture of Group 17's minesweeper game. It is intended for both the GTA and the Project 2 team.
 
-[Link back to README](../README.md)
+[Link back to README](../../README.md)
 
 ## Overview
 This project is a 10x10 version of the puzzle game Minesweeper. It has user specified number of mines (10-20), the first click is guaranteed to be safe, the user can toggle flags, and the game automatically detects a win/loss.
