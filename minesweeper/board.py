@@ -97,6 +97,32 @@ class Board:
     def draw(self, screen):
         #Load in asset files
         self.loadAssets()
+        
+        # Draw column labels A-J
+        for col in range(self.cols):
+            label = chr(ord('A') + col) #Label to give is A's unicode plus column number
+            text = self.font.render(label, True, "black")   
+            text_rect = text.get_rect(
+                center=(
+                    self.x + col * self.tile_size + self.tile_size // 2,
+                    self.y - 15
+                )
+            )
+            screen.blit(text, text_rect)
+
+        # Draw row labels 1-10
+        for row in range(self.rows):
+            label = str(1 + row) #Label to give is 1 + row number
+            text = self.font.render(label, True, "black")
+            text_rect = text.get_rect(
+                center=(
+                    self.x - 15,
+                    self.y + row * self.tile_size + self.tile_size // 2
+                )
+            )
+            screen.blit(text, text_rect)
+
+        
 
         #Draw board onto the screen
         for row in range(self.rows):
