@@ -6,9 +6,9 @@ A 10x10 version of the classic puzzle game Minesweeper.
 
 2. Clone the github repository
 
-3. cd into "EECS-581-G17"
+3. `cd` into `EECS-581-G17`
 
-   You should see the folder "minesweeper" if you run `ls` (or `dir` on Windows)
+   You should see the folder `minesweeper` if you run `ls` (or `dir` on Windows)
 
 4. Create the virtual environment by running:
 
@@ -20,11 +20,11 @@ A 10x10 version of the classic puzzle game Minesweeper.
 
    If on Windows: `source \.venv\Scripts\activate`
 
-6. Install the pip package "pygame" by running: `pip install pygame`
+6. Install the pip package `pygame` by running: `pip install pygame`
 
-   You should now see pygame in the installed package list if you run `pip list`
+   You should now see `pygame` in the installed package list if you run `pip list`
 
-7. cd into the "minesweeper" folder
+7. `cd` into the `minesweeper` folder
 
 8. Finally, start the program by running the command: `python main.py`
 
