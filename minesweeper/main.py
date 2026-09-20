@@ -1,11 +1,12 @@
 """
 Name: main.py
-Function: main function for minesweeper game that displays the board
+Function: main function for minesweeper game that starts the game, displays some board details and detects player interaction.
 Inputs: None
 Outputs: None
 External sources: pygame documentation for reference
 Authors: Mo Osby, Drew Franke, Vrishank Kulkarni 
-date: 09/12/2026
+Date Created: 09/12/2026
+Date Last Edited: 09/20/2026
 """
 import pygame 
 from board import Board
