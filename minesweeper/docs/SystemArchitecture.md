@@ -213,7 +213,11 @@ the assets are credited above.*
 | Asset Files            | .5        | 1.0     |
 | Flagging System & misc | 1.0       | 1.5     |
 | **Total**              | **3.5**   | **4.5** |
-
+#### Noah Mast
+| Task           | Estimated | Actual  |
+| -------------- | --------- | ------- |
+| Documentation  |     3.5      | 5      |
+| **Total**      |     **1**      | **2** |
 #### How we got our estimates: 
 We convened as a group, and each of us gave our estimates in hours for the tasks we were assigned and those others were assigned. 
 We then took the average of hours for each task. 
