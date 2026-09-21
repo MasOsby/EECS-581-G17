@@ -220,7 +220,7 @@ the assets are credited above.*
 | **Total**      |     **3.5**      | **5** |
 #### How we got our estimates: 
 We convened as a group, and each of us gave our estimates in hours for the tasks we were assigned and those others were assigned. 
-We then took the average of hours for each task. 
+We then took the average of hours for each task. We believe we underestimated because several group members are new to Pygame and despite knowing how to implement things, we had to learn the syntax.
 
 #### Group Meetings : 4 hours, 4 meetings
 #### Group Meeting Estimate : 3 hours, 3 meetings
