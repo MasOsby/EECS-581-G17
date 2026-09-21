@@ -187,9 +187,9 @@ the assets are credited above.*
 #### Drew Franke
 | Task                                  | Estimated | Actual |
 | ------------------------------------- | --------- | ------ |
-| Coding and Pygame Documentation       |           | 1.5    |
-| Coding Task 2 and Left-Click Handling |           | 1.5    |
-| **Total**                             |           | **3**  |
+| Coding and Pygame Documentation       |    1      | 1.5    |
+| Coding Task 2 and Left-Click Handling |    1.5    | 1.5    |
+| **Total**                             |  **2.5**  | **3**  |
 #### Vrishank Kulkarni
 | Task            | Estimated | Actual |
 | --------------- | --------- | ------ |
