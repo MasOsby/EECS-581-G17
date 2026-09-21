@@ -200,12 +200,11 @@ the assets are credited above.*
 | ----------------------------------- | --------- | -------- |
 | Adjacent Mines and Recursive Reveal |      1     | 1.5      |
 | Win/Lose Logic                      |      .5     | .75      |
-| **Total**                           |      1.5     | **2.25** |
+| **Total**                           |      **1.5**     | **2.25** |
 #### Mo Osby
 | Task           | Estimated | Actual  |
 | -------------- | --------- | ------- |
-| Win/Lose Logic |           | .5      |
-| Win/Lose       |           | 1       |
+| Win/Lose Logic |           | 1.5      |
 | **Total**      |           | **1.5** |
 #### Davina Love
 | Task                   | Estimated | Actual  |
@@ -218,8 +217,7 @@ the assets are credited above.*
 | Task           | Estimated | Actual  |
 | -------------- | --------- | ------- |
 | Win/Lose Logic |           | .5      |
-| Win/Lose       |           | 1       |
-| **Total**      |           | **1.5** |
+| **Total**      |           | **.5** |
 
 #### Group Meetings : 4 hours, 4 meetings
 
