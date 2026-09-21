@@ -214,6 +214,10 @@ the assets are credited above.*
 | Flagging System & misc | 1.0       | 1.5     |
 | **Total**              | **3.5**   | **4.5** |
 
+#### How we got our estimates: 
+We convened as a group, and each of us gave our estimates in hours for the tasks we were assigned and those others were assigned. 
+We then took the average of hours for each task. 
+
 
 #### Group Meetings : 4 hours, 4 meetings
 
