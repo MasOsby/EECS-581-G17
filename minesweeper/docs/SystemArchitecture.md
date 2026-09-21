@@ -194,7 +194,7 @@ the assets are credited above.*
 | Task            | Estimated | Actual |
 | --------------- | --------- | ------ |
 | Flagging System (task 5) |     1      | 1.5      |
-| **Total**       |      1     | **1.5**  |
+| **Total**       |      **1**     | **1.5**  |
 #### Alex Lanter
 | Task                                | Estimated | Actual   |
 | ----------------------------------- | --------- | -------- |
@@ -205,7 +205,7 @@ the assets are credited above.*
 | Task           | Estimated | Actual  |
 | -------------- | --------- | ------- |
 | Win/Lose Logic |     1      | 2      |
-| **Total**      |     1      | **2** |
+| **Total**      |     **1**      | **2** |
 #### Davina Love
 | Task                   | Estimated | Actual  |
 | ---------------------- | --------- | ------- |
@@ -218,9 +218,10 @@ the assets are credited above.*
 We convened as a group, and each of us gave our estimates in hours for the tasks we were assigned and those others were assigned. 
 We then took the average of hours for each task. 
 
-
 #### Group Meetings : 4 hours, 4 meetings
+#### Group Meeting Estimate : 3 hours, 3 meetings
+
 
 ## Grand Total Person Hours 
-### Estimated = 
-### Actual = 
+### Estimated = 16
+### Actual = 22.25
