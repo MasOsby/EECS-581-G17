@@ -198,9 +198,9 @@ the assets are credited above.*
 #### Alex Lanter
 | Task                                | Estimated | Actual   |
 | ----------------------------------- | --------- | -------- |
-| Adjacent Mines and Recursive Reveal |           | 1.5      |
-| Win/Lose Logic                      |           | .75      |
-| **Total**                           |           | **2.25** |
+| Adjacent Mines and Recursive Reveal |      1     | 1.5      |
+| Win/Lose Logic                      |      .5     | .75      |
+| **Total**                           |      1.5     | **2.25** |
 #### Mo Osby
 | Task           | Estimated | Actual  |
 | -------------- | --------- | ------- |
@@ -221,7 +221,7 @@ the assets are credited above.*
 | Win/Lose       |           | 1       |
 | **Total**      |           | **1.5** |
 
-#### Group Meetings : 2.5 hours
+#### Group Meetings : 4 hours, 4 meetings
 
 ## Grand Total Person Hours 
 ### Estimated = 
