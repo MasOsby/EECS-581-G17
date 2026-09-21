@@ -199,13 +199,13 @@ the assets are credited above.*
 | Task                                | Estimated | Actual   |
 | ----------------------------------- | --------- | -------- |
 | Adjacent Mines and Recursive Reveal |      1     | 1.5      |
-| Win/Lose Logic                      |      .5     | .75      |
+| Win/Lose Logic (Merge Integration)                      |      .5     | .75      |
 | **Total**                           |      **1.5**     | **2.25** |
-#### Mo Osby
+#### Mo Osby, Kayaan Patel
 | Task           | Estimated | Actual  |
 | -------------- | --------- | ------- |
-| Win/Lose Logic |           | 1.5      |
-| **Total**      |           | **1.5** |
+| Win/Lose Logic |     1      | 2      |
+| **Total**      |     1      | **2** |
 #### Davina Love
 | Task                   | Estimated | Actual  |
 | ---------------------- | --------- | ------- |
@@ -213,11 +213,7 @@ the assets are credited above.*
 | Asset Files            | .5        | 1.0     |
 | Flagging System & misc | 1.0       | 1.5     |
 | **Total**              | **3.5**   | **4.5** |
-#### Kayaan Patel
-| Task           | Estimated | Actual  |
-| -------------- | --------- | ------- |
-| Win/Lose Logic |           | .5      |
-| **Total**      |           | **.5** |
+
 
 #### Group Meetings : 4 hours, 4 meetings
 
