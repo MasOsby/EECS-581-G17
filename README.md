@@ -36,6 +36,3 @@ Then, use left click to uncover spaces and right click to toggle flags. Right cl
 
 ## System Architecture Documentation
 [Link to page](minesweeper/docs/SystemArchitecture.md)
-
-## Estimated and Actual Person Hours
-[Link to page](minesweeper/docs/PersonHours.md)
