@@ -217,7 +217,7 @@ the assets are credited above.*
 | Task           | Estimated | Actual  |
 | -------------- | --------- | ------- |
 | Documentation  |     3.5      | 5      |
-| **Total**      |     **1**      | **2** |
+| **Total**      |     **3.5**      | **5** |
 #### How we got our estimates: 
 We convened as a group, and each of us gave our estimates in hours for the tasks we were assigned and those others were assigned. 
 We then took the average of hours for each task. 
